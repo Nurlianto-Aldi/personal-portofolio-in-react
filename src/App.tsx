@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import AboutPage from './pages/About'
 import ProjectPage from './pages/Project'
 import DarkModePage from './pages/DarkMode'
+import ProjectContent from './components/ProjectContent'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<AboutPage />} />
           <Route path="/project" element={<ProjectPage />} />
+          <Route path="/project/:projectId" element={<ProjectContent />} />
           <Route path="/dark-mode" element={<DarkModePage />} />
         </Routes>
       </main>
