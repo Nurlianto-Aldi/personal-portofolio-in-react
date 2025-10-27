@@ -104,5 +104,32 @@ export const projectList: ProjectList[] = [
         alt: "The output"
       },
     ]
+  }, {
+    id: 3, 
+    title: "Fetching Skill Showcase", 
+    thumbnail: "/Screenshot 2025-10-27 at 3.56.31 PM.png",
+    tools: ["React.js", "Tailwind CSS", "Axios", "Vercel"],
+    desc: "As a developer, my role extends beyond implementing visual designs to encompass data fetching, where I retrieve and present information to the user. I created this project specifically to showcase my proficiency in successfully integrating and managing data from multiple external APIs, demonstrating my ability to handle diverse data structures and complex integrations.",
+    projLink: "https://fetch-skill-showcase.vercel.app/",
+    content: [
+      {
+        type: "text", 
+        text: "While most people think of my job as simply translating visual designs into code, a crucial part of my daily work is actually more like being a data detective. When a user needs information—whether it's their account balance, a list of products, or real-time updates—it's my responsibility to securely and efficiently fetch that data from the appropriate source, structure it correctly, and present it clearly on the screen. It's the engine beneath the beautiful interface."
+      }, {
+        type: "text",
+        text: "This project was my way of proving I could handle the most complex data challenges. Instead of dealing with one single, clean database, I deliberately set out to integrate multiple external APIs, each with its own unique authentication rules, data formats, and rate limits. This wasn't just about making simple requests; it was about designing a robust system that could manage the chaos of different data structures and ensure seamless, real-time communication."
+      }, {
+        type: "image",
+        src: "/Screenshot 2025-10-27 at 3.59.25 PM.png",
+        alt: "The code and the structure folder"
+      }, {
+        type: "text",
+        text: "The result is a demonstration of pure technical capability. By successfully harmonizing and presenting data retrieved from these disparate services, I proved my expertise in creating reliable data pipelines. It’s the concrete evidence that I don't just make things look good; I build the underlying systems that make the application functional, reliable, and capable of handling real-world data complexity."
+      }, {
+        type: "image",
+        src: "/Screenshot 2025-10-27 at 3.56.31 PM.png",
+        alt: "The output"
+      },
+    ]
   }, 
 ]
