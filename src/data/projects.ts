@@ -73,7 +73,7 @@ export const projectList: ProjectList[] = [
   }, {
     id: 2, 
     title: "To-do List in React", 
-    thumbnail: "Screenshot 2025-10-27 at 5.01.19 AM (1).png",
+    thumbnail: "/Screenshot 2025-10-27 at 5.01.19 AM (1).png",
     tools: ["React.js", "Tailwind CSS", "Vercel"],
     desc: "Showing my capabilities to manipulate virtual DOM through React.js.",
     projLink: "https://to-do-list-in-react-five.vercel.app/",
@@ -93,14 +93,14 @@ export const projectList: ProjectList[] = [
         ]
       }, {
         type: "image",
-        src: "Screenshot 2025-10-27 at 6.00.23 AM (1).png",
+        src: "/Screenshot 2025-10-27 at 6.00.23 AM (1).png",
         alt: "The code and the structure folder"
       }, {
         type: "text",
         text: "In a nutshell, the core concept of vanilla JavaScript and using it with React is actually the same. You just have to implement it in a different way to have the same result. And there is nothing fancy about this project, i don't even use TypeScript so i cna focus on the structure."
       }, {
         type: "image",
-        src: "Screenshot 2025-10-27 at 5.01.19 AM (1).png",
+        src: "/Screenshot 2025-10-27 at 5.01.19 AM (1).png",
         alt: "The output"
       },
     ]
