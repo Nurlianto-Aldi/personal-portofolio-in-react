@@ -16,9 +16,25 @@ const ProjectContent = () => {
   }
 
   return (
-    <div className="p-5 md:p-12 lg:py-[90px] lg:px-[270px]">
+    <div className="p-5 md:p-12 lg:py-[90px] lg:px-[300px] font-roboto">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">{project.title}</h1>
-      <div className="mt-12 text-justify">
+      <hr className="my-2 mt-8"/>
+      <h2 className=" italic">Tools: {project.tools.join(", ")}</h2>
+      <p className="italic mt-2">
+        See the project live:{" "}
+        <a
+          href={project.projLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:text-blue-800 underline"
+        >
+          Live Demo
+        </a>
+      </p>
+
+      <hr className="my-2"/>
+
+      <div className="mt-8 text-justify">
         {project.content.map((item, index) => { // Parameter 'item' sudah benar
           switch (item.type) { // Menggunakan 'item.type'
             case "text":
@@ -48,17 +64,7 @@ const ProjectContent = () => {
           }
         })}
       </div>
-      <p className="italic mt-8">
-        See the project live:{" "}
-        <a
-          href={project.projLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:text-blue-800 underline"
-        >
-          Live Demo
-        </a>
-      </p>
+      
     </div>
   );
 };
