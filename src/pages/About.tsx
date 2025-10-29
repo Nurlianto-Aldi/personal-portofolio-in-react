@@ -8,7 +8,7 @@ const AboutPage = () => {
 
   return (
     <main
-        className={`flex flex-col items-center justify-center min-h-[calc(100vh-90px)] p-24 max-lg:p-16 max-sm:p-6 font-roboto ${theme === true ? "bg-white text-[#2b2b23]" : "bg-[url('/batman-pattinson.png')] bg-contain bg-no-repeat bg-center bg-[#dc0103] bg-blend-overlay text-black"}`}
+        className={`flex flex-col items-center justify-center min-h-[calc(100vh-90px)] p-24 max-lg:p-16 max-sm:p-6 font-roboto ${theme === true ? "bg-white bg-[url('/pattern.png')] text-[#2b2b23]" : "bg-[url('/batman-pattinson.png')] bg-contain bg-repeat bg-center bg-[#dc0103] bg-blend-overlay text-black"}`}
       >
 
         <div
@@ -17,7 +17,7 @@ const AboutPage = () => {
 
           {/* image and social */}
           <div 
-            className={`flex flex-col items-center justify-between lg:min-h-120 lg:min-w-[200px] px-5 py-8 outline-2 rounded-xl ${theme === true ? "outline-gray-100" : "outline-[#2b2b23]"}`}
+            className={`flex flex-col items-center justify-between lg:min-h-120 lg:min-w-[200px] px-5 py-8 outline-2 rounded-xl shadow-xl ${theme === true ? "bg-white outline-gray-100" : " bg-[#dc0103] outline-[#2b2b23]"}`}
           >
 
             {/* image */}
@@ -49,7 +49,7 @@ const AboutPage = () => {
 
           {/* name and desc */}
           <div
-            className={`flex flex-col lg:min-h-120 lg:min-w-140 lg:max-w-140 gap-6 px-5 py-8 outline-2 rounded-xl ${theme === true ? "outline-gray-100" : "outline-[#2b2b23]"}`}
+            className={`flex flex-col lg:min-h-120 lg:min-w-140 lg:max-w-140 gap-6 px-5 py-8 outline-2 rounded-xl shadow-xl ${theme === true ? "bg-white outline-gray-100" : "bg-[#dc0103] outline-[#2b2b23]"}`}
           >
             <h1
               className="text-5xl font-bold m-0 p-0 max-sm:text-4xl"

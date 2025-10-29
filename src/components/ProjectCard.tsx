@@ -1,3 +1,5 @@
+import { useTheme } from "./ThemeSwitcher";
+
 interface ProjectListProps {
   title: string;
   tools: string[];
@@ -7,9 +9,11 @@ interface ProjectListProps {
 
 const ProjectCard = ({title, tools, desc, thumbnail}: ProjectListProps) => {
 
+  const { theme } = useTheme();
+
   return (
     <div
-      className="flex flex-col shadow-xl rounded-b-xl w-full h-83 font-roboto"
+      className={`flex flex-col shadow-xl rounded-b-xl w-full h-83 font-roboto ${theme === true ? "bg-white" : "bg-[#dc0103]"}`}
     >
 
       {/* image */}

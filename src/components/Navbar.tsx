@@ -18,7 +18,7 @@ const Navbar = () => {
     <>
       <nav
         className={`relative z-10 flex items-center justify-between w-full h-[90px] shadow-xl px-4 sm:px-6 font-roboto 
-          ${theme === true ? "bg-white text-[#2b2b23]" : "bg-contain bg-no-repeat bg-center bg-[#dc0103] bg-blend-overlay text-black"}
+          ${theme === true ? "bg-white text-[#2b2b23]" : "bg-contain bg-[url('/batman-pattinson.png')] bg-no-repeat bg-center bg-[#dc0103] bg-blend-overlay text-black"}
           `}
           // bg-[url('/batman-pattinson.png')]
       >
