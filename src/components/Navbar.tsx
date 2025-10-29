@@ -52,7 +52,7 @@ const Navbar = () => {
 
           <audio
             ref={audioRef}
-            src="/public/The Batman Something in the Way but only the good part (2023).mp3"
+            src="/The Batman Something in the Way but only the good part (2023).mp3"
             preload="auto"
             style={{ display: 'none' }}
           />
