@@ -21,7 +21,7 @@ export const projectList: ProjectList[] = [
     id: 1, 
     title: "Personal Portofolio", 
     thumbnail: "/Screenshot 2025-10-24 at 12.19.25 PM (1).png",
-    tools: ["Next.js 15", "Tailwind CSS", "TypeScript", "Figma", "Vercel"],
+    tools: ["Next.js", "Tailwind CSS", "TypeScript", "Figma", "Vercel"],
     desc: "Personal showcase built on the Next.js App Router for maximum performance and superior SEO. Features comprehensive project overviews and a clean, responsive layout tailored for large screens.",
     projLink: "https://nurlianto-aldi.vercel.app/",
     content: [

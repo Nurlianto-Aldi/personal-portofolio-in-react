@@ -1,9 +1,14 @@
 import { Icon } from "@iconify/react"
+import { useTheme } from "../components/ThemeSwitcher";
 
 const AboutPage = () => {
+
+  const { theme } = useTheme();
+
+
   return (
     <main
-        className="flex flex-col items-center justify-center min-h-[calc(100vh-90px)] p-24 max-lg:p-16 max-sm:p-6 font-roboto"
+        className={`flex flex-col items-center justify-center min-h-[calc(100vh-90px)] p-24 max-lg:p-16 max-sm:p-6 font-roboto ${theme === true ? "bg-white text-[#2b2b23]" : "bg-[url('/batman-pattinson.png')] bg-contain bg-no-repeat bg-center bg-[#dc0103] bg-blend-overlay text-black"}`}
       >
 
         <div
@@ -12,7 +17,7 @@ const AboutPage = () => {
 
           {/* image and social */}
           <div 
-            className="flex flex-col items-center justify-between lg:min-h-120 lg:min-w-[200px] px-5 py-8 outline-2 outline-gray-100 rounded-xl"
+            className={`flex flex-col items-center justify-between lg:min-h-120 lg:min-w-[200px] px-5 py-8 outline-2 rounded-xl ${theme === true ? "outline-gray-100" : "outline-[#2b2b23]"}`}
           >
 
             {/* image */}
@@ -23,10 +28,10 @@ const AboutPage = () => {
                 className="bg-gray-400 rounded-full w-[180px] h-[180px] shrink-0 max-sm:w-[150px] max-sm:h-[150px] relative overflow-hidden"
               >
                 <img
-                  src="/IMG_1154 - crop (1).png"
+                  src={theme === true ? "/IMG_1154 - crop (1).png" : "/g2.png"}
+                  // src="/IMG_1154 - crop (1).png"
                   alt="nurlianto-aldi"
-                  style={{objectFit: "cover"}}
-                  className="absolute w-full h-full object-cover"
+                  className=" w-full h-full object-cover"
                 />
               </div>
               <p className="text-center">JavaScript | Python | Next.js | React.js | Tailwind CSS | TypeScript</p>
@@ -44,20 +49,26 @@ const AboutPage = () => {
 
           {/* name and desc */}
           <div
-            className="flex flex-col lg:min-h-120 gap-6 px-5 py-8 outline-2 outline-gray-100 rounded-xl"
+            className={`flex flex-col lg:min-h-120 lg:min-w-140 lg:max-w-140 gap-6 px-5 py-8 outline-2 rounded-xl ${theme === true ? "outline-gray-100" : "outline-[#2b2b23]"}`}
           >
             <h1
               className="text-5xl font-bold m-0 p-0 max-sm:text-4xl"
             >
-              Nurlianto Aldi
+              {theme === true ? "Nurlianto Aldi" : "I'm Batman"}
             </h1>
             <p
               className="m-0 p-0"
             >
-              I am a Front-End Web Developer with a distinctive background in Marketing Management, where I spent over three years driving growth and operational efficiency in startup settings. This transition has armed me with a powerful combination of technical expertise and business insight.
+              {theme === true ? "I am a Front-End Web Developer with a distinctive background in Marketing Management, where I spent over three years driving growth and operational efficiency in startup settings. This transition has armed me with a powerful combination of technical expertise and business insight." : 
+              "I'm Batman! Basically. I wake up at night like a bat, fighting crime (bugs), and having black shade around my eye. I'm basically Batman. "}
+              {/* I am a Front-End Web Developer with a distinctive background in Marketing Management, where I spent over three years driving growth and operational efficiency in startup settings. This transition has armed me with a powerful combination of technical expertise and business insight. */}
             </p>
             <p
-              className="m-0 p-0">I build robust applications using React.js, Next.js, TypeScript, and Tailwind CSS. Crucially, my history in business strategy, market analysis, and negotiation translates directly into strong project management, stakeholder communication, and solution-driven problem-solving. I am eager to leverage this unique duality to create user-centric and scalable software that directly supports high-level business goals and accelerates company development.</p>
+              className="m-0 p-0"
+            >
+              {theme === true ? "I build robust applications using React.js, Next.js, TypeScript, and Tailwind CSS. Crucially, my history in business strategy, market analysis, and negotiation translates directly into strong project management, stakeholder communication, and solution-driven problem-solving. I am eager to leverage this unique duality to create user-centric and scalable software that directly supports high-level business goals and accelerates company development." : ""}
+              {/* I build robust applications using React.js, Next.js, TypeScript, and Tailwind CSS. Crucially, my history in business strategy, market analysis, and negotiation translates directly into strong project management, stakeholder communication, and solution-driven problem-solving. I am eager to leverage this unique duality to create user-centric and scalable software that directly supports high-level business goals and accelerates company development. */}
+            </p>
 
           </div>
         </div>

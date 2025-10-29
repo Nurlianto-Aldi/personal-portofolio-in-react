@@ -1,8 +1,11 @@
 import { useParams } from "react-router-dom";
 import { projectList } from "../data/projects";
+import { useTheme } from "./ThemeSwitcher";
 
 const ProjectContent = () => {
   const { projectId } = useParams();
+
+  const { theme } = useTheme()
 
   const project = projectList.find((p) => p.id.toString() === projectId);
 
@@ -16,7 +19,7 @@ const ProjectContent = () => {
   }
 
   return (
-    <div className="p-5 md:p-12 lg:py-[90px] lg:px-[300px] font-roboto">
+    <div className={`p-5 md:p-12 lg:py-[90px] lg:px-[300px] font-roboto min-h-[calc(100vh-90px)] ${theme === true ? "bg-white text-[#2b2b23]" : "bg-[url('/batman-pattinson.png')] bg-contain bg-no-repeat bg-center bg-[#dc0103] bg-blend-overlay text-black"}`}>
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">{project.title}</h1>
       <hr className="my-2 mt-8"/>
       <h2 className=" italic">Tools: {project.tools.join(", ")}</h2>

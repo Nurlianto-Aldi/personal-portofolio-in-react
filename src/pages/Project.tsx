@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { projectList } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
+import { useTheme } from "../components/ThemeSwitcher";
 
 const ProjectPage = () => {
+
+  const { theme } = useTheme()
 
   if(!projectList) {
     return (
@@ -14,7 +17,7 @@ const ProjectPage = () => {
   }
 
   return (
-    <main className="p-5 md:p-12 lg:p-[90px]">
+    <main className={`p-5 md:p-12 lg:p-[90px] min-h-[calc(100vh-90px)] ${theme === true ? "bg-white text-[#2b2b23]" : "bg-[url('/batman-pattinson.png')] bg-contain bg-no-repeat bg-center bg-[#dc0103] bg-blend-overlay text-black"}`}>
       <ul
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
