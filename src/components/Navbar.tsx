@@ -46,50 +46,45 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div
-          className="flex items-center justify-between w-43"
-        >
+        {/* Audio element moved outside for global access */}
+        <audio
+          ref={audioRef}
+          src="/The Batman Something in the Way but only the good part (2023).mp3"
+          preload="auto"
+          style={{ display: 'none' }}
+        />
 
-          <audio
-            ref={audioRef}
-            src="/The Batman Something in the Way but only the good part (2023).mp3"
-            preload="auto"
-            style={{ display: 'none' }}
-          />
-
-          {/* dark mode button */}
+        {/* Dark mode button - visible only on desktop */}
+        <div className="hidden md:flex items-center justify-between w-43">
           <span>
             {theme === true ? "Dark Mode" : "No, too dark!"}
           </span>
           <div
-            className="flex items-center justify-center px-2 w-20 h-10 rounded-full  shadow-[inset_-20px_-20px_50px_#46464620]"
+            className="flex items-center justify-center px-2 w-20 h-10 rounded-full shadow-[inset_-20px_-20px_50px_#46464620]"
           >
-
-           <div
-            className={`relative flex items-center w-full outline-1 outline-gray-100 rounded-full bg-white`}
-           >
+            <div
+              className={`relative flex items-center w-full outline-1 outline-gray-100 rounded-full bg-white`}
+            >
               <button
-              onClick={() => {
-                handleTheme();
-                toggleAudio();
-              }}
+                onClick={() => {
+                  handleTheme();
+                  toggleAudio();
+                }}
                 className={`bg-gray-500 h-7 w-7 rounded-full cursor-pointer transition-transform duration-500 ${
                   theme === true ? "translate-x-0" : "translate-x-9" 
                 }`}
               >
-                
               </button>
-            
             </div> 
           </div>
-
         </div>
 
+        {/* Mobile menu button */}
         <div className="md:hidden ml-auto">
-        <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Open menu">
-          <Icon icon="ci:hamburger-lg" width={30} />
-        </button>
-      </div>
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Open menu">
+            <Icon icon="ci:hamburger-lg" width={30} />
+          </button>
+        </div>
 
       {isMenuOpen && (
         <div className="md:hidden fixed top-0 right-0 h-screen w-3/4 bg-white z-50 shadow-2xl flex flex-col p-8">
@@ -113,6 +108,32 @@ const Navbar = () => {
                 </NavLink>
               </li>
             ))}
+            
+            {/* DARK MODE button in mobile menu */}
+            <li className="mt-8 flex flex-col items-center gap-4">
+              <span className="text-lg">
+                {theme === true ? "Dark Mode" : "No, too dark!"}
+              </span>
+              <div
+                className="flex items-center justify-center px-2 w-20 h-10 rounded-full shadow-[inset_-20px_-20px_50px_#46464620]"
+              >
+                <div
+                  className={`relative flex items-center w-full outline-1 outline-gray-100 rounded-full bg-white`}
+                >
+                  <button
+                    onClick={() => {
+                      handleTheme();
+                      toggleAudio();
+                      setIsMenuOpen(false);
+                    }}
+                    className={`bg-gray-500 h-7 w-7 rounded-full cursor-pointer transition-transform duration-500 ${
+                      theme === true ? "translate-x-0" : "translate-x-9" 
+                    }`}
+                  >
+                  </button>
+                </div> 
+              </div>
+            </li>
           </ul>
         </div>
       )}
