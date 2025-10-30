@@ -39,7 +39,7 @@ const AboutPage = () => {
                   className=" w-full h-full object-cover"
                 />
               </div>
-              <p className="text-center">JavaScript | Python | Next.js | React.js | Tailwind CSS | TypeScript</p>
+              <p className="text-center">Communication | Team Collaboration | Problem Solving | Analytical Thinking | Quality & Testing Management</p>
             </div>
 
             {/* social */}
@@ -64,7 +64,7 @@ const AboutPage = () => {
             <p
               className="m-0 p-0"
             >
-              {theme === true ? "I am a Front-End Web Developer with a distinctive background in Marketing Management, where I spent over three years driving growth and operational efficiency in startup settings. This transition has armed me with a powerful combination of technical expertise and business insight." : 
+              {theme === true ? <q>I am a <strong>Front-End Web Developer</strong> with a distinctive background in <strong>Marketing Management</strong>, where I spent over three years driving growth and operational efficiency in startup settings. This transition has armed me with a powerful combination of technical expertise and business insight.</q> : 
               "I'm Batman! Basically. I wake up at night like a bat, fighting crime (bugs), and having black shade around my eye. I'm basically Batman. "}
               {/* I am a Front-End Web Developer with a distinctive background in Marketing Management, where I spent over three years driving growth and operational efficiency in startup settings. This transition has armed me with a powerful combination of technical expertise and business insight. */}
             </p>
