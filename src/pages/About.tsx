@@ -8,9 +8,14 @@ const AboutPage = () => {
 
   return (
     <main
-        className={`flex flex-col items-center justify-center min-h-[calc(100vh-90px)] p-24 max-lg:p-16 max-sm:p-6 font-roboto ${theme === true ? "bg-white bg-[url('/pattern.png')] text-[#2b2b23]" : "bg-[url('/batman-pattinson.png')] bg-contain bg-repeat bg-center bg-[#dc0103] bg-blend-overlay text-black"}`}
+      className="flex flex-col"
+    >
+
+      <div
+        className={`flex flex-col items-center justify-center gap-6 md:gap-12 lg:gap-4 min-h-[calc(100vh-90px)] p-24 max-lg:p-16 max-sm:p-6 font-roboto ${theme === true ? "bg-white bg-[url('/pattern.png')] text-[#2b2b23]" : "bg-[url('/batman-pattinson.png')] bg-contain bg-repeat bg-center bg-[#dc0103] bg-blend-overlay text-black"}`}
       >
 
+        {/* image and text */}
         <div
           className="flex flex-row items-center justify-center w-[800px] max-w-full gap-6 md:gap-12 lg:gap-4 max-md:flex-col max-md:text-center"
         >
@@ -72,7 +77,80 @@ const AboutPage = () => {
 
           </div>
         </div>
-      </main>
+
+        {/* education and tech stack */}
+        <div
+          className="flex flex-col lg:flex-row w-full max-w-[800px] gap-6"
+        >
+
+        {/* education */}
+        <div
+          className={`flex flex-col flex-1 min-w-1/3 items-center justify-center w-full px-5 py-4 outline-2 rounded-xl shadow-xl ${theme === true ? "bg-white outline-gray-100" : " bg-[#dc0103] outline-[#2b2b23]"}`}
+        >
+          <h1
+            className="font-bold font-roboto mb-2 "
+          >
+            Education 
+          </h1>
+            <div
+              className="flex  gap-5 flex-wrap lg:flex-row items-center justify-center w-full"
+            >
+              <a href="">
+                <img src="/g11.png" alt="univresity" className="w-25"/>
+              </a>
+              <a href="">
+                <img src="/g13.png" alt="univresity" className="w-25" />
+              </a>
+            </div>
+        </div>
+
+        {/* tech stack */}
+        <div
+          className={`flex flex-col grow items-center justify-center w-full max-w-[800px] px-5 py-4 outline-2 rounded-xl shadow-xl ${theme === true ? "bg-white outline-gray-100" : " bg-[#dc0103] outline-[#2b2b23]"}`}
+        >
+          <h1
+            className="font-bold font-roboto mb-2"
+          >
+            Tech Stack
+          </h1>
+          <div
+            className="flex flex-row flex-wrap gap-5 items-center justify-between w-full h-full"
+          >
+            <a href="">
+              <Icon icon="skill-icons:javascript" width={37.5} height={37.5}/>
+            </a>
+            <a href="">
+              <Icon icon="skill-icons:python-dark" width={37.5} height={37.5}/>
+            </a>
+            <a href="">
+              <Icon icon="skill-icons:nextjs-dark" width={37.5} height={37.5}/>
+            </a>
+            <a href="">
+              <Icon icon="skill-icons:react-dark" width={37.5} height={37.5}/>
+            </a>
+            <a href="">
+              <Icon icon="skill-icons:tailwindcss-dark" width={37.5} height={37.5}/>
+            </a>
+            <a href="">
+              <Icon icon="skill-icons:typescript" width={37.5} height={37.5}/>
+            </a>
+            <a href="">
+              <Icon icon="skill-icons:figma-dark" width={37.5} height={37.5}/>
+            </a>
+          </div>
+          <div>
+
+          </div>
+        </div>
+
+
+        </div>
+        
+
+
+      </div>
+
+    </main>
   )
 }
 
