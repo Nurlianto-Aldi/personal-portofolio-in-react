@@ -87,7 +87,7 @@ const Navbar = () => {
         </div>
 
       {isMenuOpen && (
-        <div className="md:hidden fixed top-0 right-0 h-screen w-3/4 bg-white z-50 shadow-2xl flex flex-col p-8">
+        <div className={`md:hidden fixed top-0 right-0 h-screen w-3/4 overflow-scroll ${theme === true ? "bg-white" : "bg-[#dc0103]"} z-50 shadow-2xl flex flex-col p-8`}>
           <div className="flex justify-end mb-12">
             <button onClick={() => setIsMenuOpen(false)} aria-label="Close menu">
               <Icon icon="ci:close-big" width={30} />
@@ -115,10 +115,10 @@ const Navbar = () => {
                 {theme === true ? "Dark Mode" : "No, too dark!"}
               </span>
               <div
-                className="flex items-center justify-center px-2 w-20 h-10 rounded-full shadow-[inset_-20px_-20px_50px_#46464620]"
+                className={`flex items-center justify-center px-2 w-20 h-10 rounded-full shadow-[inset_-20px_-20px_50px_#46464620]}`}
               >
                 <div
-                  className={`relative flex items-center w-full outline-1 outline-gray-100 rounded-full bg-white`}
+                  className={`relative flex items-center w-full outline-1 outline-gray-100 rounded-full bg-white `}
                 >
                   <button
                     onClick={() => {
@@ -135,7 +135,7 @@ const Navbar = () => {
               </div>
             </li>
 
-            
+
           </ul>
         </div>
       )}
