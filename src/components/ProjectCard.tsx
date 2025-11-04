@@ -13,7 +13,7 @@ const ProjectCard = ({title, tools, desc, thumbnail}: ProjectListProps) => {
 
   return (
     <div
-      className={`flex flex-col shadow-xl rounded-b-xl w-full h-83 font-roboto ${theme === true ? "bg-white" : "bg-[#dc0103]"}`}
+      className={`flex flex-col shadow-xl rounded-b-xl w-full h-[320px] font-roboto ${theme === true ? "bg-white" : "bg-[#dc0103]"}`}
     >
 
       {/* image */}

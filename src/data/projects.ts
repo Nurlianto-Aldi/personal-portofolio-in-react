@@ -131,5 +131,42 @@ export const projectList: ProjectList[] = [
         alt: "The output"
       },
     ]
+  }, {
+    id: 4, 
+    title: "Jaegers Premium Care", 
+    thumbnail: "/Screenshot 2025-11-04 at 6.47.16 PM.jpg",
+    tools: ["HTML", "CSS", "Tailwind CSS", "Semantic", "Vercel"],
+    desc: "A website to fulfill the assignment from RevoU. Focussing on HTML structure semantic and styling in vanilla CSS and Tailwind CSS.",
+    projLink: "https://jaegers-premium-care.vercel.app/",
+    content: [
+      {
+        type: "text", 
+        text: "i build this website to fulfill the assignment from RevoU when i was still in Full-Stack Software Engineering program. This website focussing on HTML structure semantic and styling using CSS. "
+      }, {
+        type: "image",
+        src: "/Screenshot 2025-11-04 at 6.46.41 PM.png",
+        alt: "You can see from Github that i created this repo at 2024"
+      }, {
+        type: "text",
+        text: "At first, i'm using vanilla CSS complete with the responsive design, but as my journey in the learning, i'm aware about a framework called Tailwind CSS. This framework let me do the styling like inline css styling, but with preset. This makes me don't need to oepn separate windows tab to link between the HTML element and the CSS style. It's hard to use it at the beginning, but its actually make styling a lot more easier since i'll remember the common Tailwind CSS style as i keep using it."
+      }, {
+        type: "text",
+        text: "I keep the original vanilla CSS as comment to honor my legacy (so i can make 'Day 1 or 1 Day' content haha)."
+      }, {
+        type: "image",
+        src: "/Screenshot 2025-11-04 at 6.48.08 PM.jpg",
+        alt: "The original vanilla code that i still keep to honor my legacy"
+      }, {
+        type: "text",
+        text: "Maybe i will go back to this project to add some animation, like shaking image when i hover into it, but for now it think it's enough and need to move to another project."
+      }, {
+        type: "text",
+        text: "I'm not using any framework or library other than Tailwind CSS (like React.js or Next.js), i'm gonna use that framework at another project."
+      }, {
+        type: "image",
+        src: "/Screenshot 2025-11-04 at 6.47.16 PM.jpg",
+        alt: "The output"
+      },
+    ]
   }, 
 ]
